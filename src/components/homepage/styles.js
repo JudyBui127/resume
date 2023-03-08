@@ -13,7 +13,7 @@ export const HelloText = styled(Typography)`
   &&{
     color: #ff5277;
     font-weight: 600;
-    font-size: 32px;
+    font-size: 30px;
     text-transform: uppercase;
   }
 `;
@@ -21,7 +21,7 @@ export const HelloText = styled(Typography)`
 export const DevelopText = styled(Typography)`
   &&{
     font-weight: 600;
-    font-size: 80px;
+    font-size: 72px;
     font-family: "Playfair Display";
   }
 `;
@@ -29,7 +29,7 @@ export const DevelopText = styled(Typography)`
 export const CommonText = styled(Typography)`
   &&{
     font-weight: 500;
-    font-size: 40px;
+    font-size: 32px;
     padding-top: 16px;
   }
 `;
