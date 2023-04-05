@@ -25,7 +25,7 @@ const Homepage = () => {
       </CommonText>
       <EmailContainer>
         <IconButton onClick={() =>
-          window.open('https://github.com/JudyBui127/resume', '_blank')}>
+          window.open('https://github.com/JudyBui127', '_blank')}>
           <GitHubIcon style={{ fontSize: 40, fill: "white" }} />
         </IconButton>
         <IconButton onClick={() =>
