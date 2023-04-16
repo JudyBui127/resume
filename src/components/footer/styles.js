@@ -10,10 +10,10 @@ export const StyledFooterContainer = styled.div`
   left: 0;
   bottom: 0;
   width: 100%;
-  height: 70px;
+  height: 80px;
   color: white;
   text-align: center;
-  border-top: 0.5px solid grey;
+  // border-top: 0.5px solid grey;
   background-color: #0e141b;
 `;
 

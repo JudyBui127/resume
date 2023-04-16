@@ -6,7 +6,7 @@ export const StyledContainer = styled(Stack)`
   max-width: 1440px;
   display: flex;
   flex-direction: column;
-  margin: 40px 150px 120px;
+  margin: 40px 150px 60px;
 `;
 
 export const HelloText = styled(Typography)`
