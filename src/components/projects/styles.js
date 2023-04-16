@@ -51,14 +51,6 @@ export const StyledButton = styled(Button)`
   }
 `;
 
-export const ButtonText = styled(Typography)`
-  &&{
-    font-weight: 500;
-    font-family: "Playfair Display";
-    text-transform: none;
-  }
-`;
-
 
 export const StyledCard = styled(Card)`
   &&{
