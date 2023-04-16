@@ -3,6 +3,7 @@ import {
   CardMedia,
   CardActions,
   CardContent,
+  Grid,
 } from '@mui/material';
 import React from 'react';
 import { 
@@ -13,7 +14,8 @@ import {
   StyledCard, 
   TechStack,
   LogoContainer,
-  LogoImg
+  LogoImg,
+  StyledGrid
 } from './styles';
 
 import restEyes from "./assets/rest-your-eyes2.png";
@@ -41,12 +43,16 @@ const STACK_LOGO = {
 const Projects = () => {
   return (
     <Stack>
-      <Stack width="100%" justifyContent="flex-start" margin="24px 0px">
+      <Stack width="100%" justifyContent="flex-start" margin="40px 0px">
         <HelloText>
           My Projects
         </HelloText>                                                                                                
       </Stack>
-      <Stack direction="row" width="100%" justifyContent="space-around">
+      <StyledGrid 
+        container 
+        rowSpacing={8} 
+        columnSpacing={{ sx: 3, sm: 3, md: 3, lg: 12 }}
+        style={{}}>
         <ProjectCard 
           projectImg={restEyes}
           title={"Rest Your Eyes"}
@@ -60,7 +66,7 @@ const Projects = () => {
           description={"A decentralized wallet for cryptocurrency, help users to easily sign into their wallet, keep track with balance and transaction history."}
           github={"https://github.com/JudyBui127/crypto-wallet"}
           techStack={["typescript", "react", "node"]} />
-      </Stack>
+      </StyledGrid>
     </Stack>
   )
 };
@@ -77,37 +83,39 @@ const ProjectCard = ({
 }) => {
 
   return (
-  <StyledCard 
-      onClick={() =>
-        window.open(website || github, '_blank')}>
-      <CardMedia
-        component="img"
-        alt="rest your eyes"
-        height="200"
-        image={projectImg}/>
-      <CardContent>
-        <ProjectName gutterBottom variant="h5" component="div">
-          {title}
-        </ProjectName>
-        <CommonText variant="body2" color="text.secondary">
-          {description}
-        </CommonText>
-        <TechStack>
-          {techStack?.map((stack) => <>{STACK_LOGO[stack]}</> )}
-        </TechStack>
-      </CardContent>
-      <CardActions style={{justifyContent: "flex-end", padding: "0px 8px 12px"}}>
-        {website && (
+    <Grid item>
+      <StyledCard 
+        onClick={() =>
+          window.open(website || github, '_blank')}>
+        <CardMedia
+          component="img"
+          alt="rest your eyes"
+          height="200"
+          image={projectImg}/>
+        <CardContent>
+          <ProjectName gutterBottom variant="h5" component="div">
+            {title}
+          </ProjectName>
+          <CommonText variant="body2" color="text.secondary">
+            {description}
+          </CommonText>
+          <TechStack>
+            {techStack?.map((stack) => <>{STACK_LOGO[stack]}</> )}
+          </TechStack>
+        </CardContent>
+        <CardActions style={{justifyContent: "flex-end", padding: "0px 8px 12px"}}>
+          {website && (
+            <StyledButton 
+              onClick={() =>
+                window.open(website, '_blank')}
+              size="small">Website</StyledButton>
+          )}
           <StyledButton 
             onClick={() =>
-              window.open(website, '_blank')}
-            size="small">Website</StyledButton>
-        )}
-        <StyledButton 
-          onClick={() =>
-            window.open(github, '_blank')}
-          size="small">Github</StyledButton>
-      </CardActions>
-    </StyledCard>
+              window.open(github, '_blank')}
+            size="small">Github</StyledButton>
+        </CardActions>
+      </StyledCard>
+    </Grid>
   )
 };

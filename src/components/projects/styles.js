@@ -1,4 +1,4 @@
-import { Card, Stack, Typography } from "@mui/material";
+import { Card, Grid, Stack, Typography } from "@mui/material";
 import styled from "styled-components";
 import Button from '@mui/material/Button';
 
@@ -91,4 +91,9 @@ export const LogoImg = styled.img`
   filter: saturate(0.3);
 `;
 
+export const StyledGrid = styled(Grid)`
+  justify-content: center;
+  align-items: center;
+
+`;
 

@@ -35,7 +35,7 @@ export const CommonText = styled(Typography)`
 `;
 
 export const EmailContainer = styled.div`
-  margin-top: 60px;
+  margin-top: 40px;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -57,6 +57,3 @@ export const ButtonText = styled(Typography)`
     text-transform: none;
   }
 `;
-
-
-
