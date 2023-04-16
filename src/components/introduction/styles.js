@@ -1,12 +1,12 @@
-import { Stack, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 import styled from "styled-components";
 import Button from '@mui/material/Button';
 
-export const StyledContainer = styled(Stack)`
+export const StyledContainer = styled.div`
   max-width: 1440px;
   display: flex;
   flex-direction: column;
-  margin: 40px 150px 120px;
+  margin: 40px 150px 40px;
 `;
 
 export const HelloText = styled(Typography)`
