@@ -62,7 +62,7 @@ const Projects = () => {
           techStack={["typescript", "react", "next"]} />
         <ProjectCard 
           projectImg={crypto}
-          title={"Cryoto Wallet"}
+          title={"Crypto Wallet"}
           description={"A decentralized wallet for cryptocurrency, help users to easily sign into their wallet, keep track with balance and transaction history."}
           github={"https://github.com/JudyBui127/crypto-wallet"}
           techStack={["typescript", "react", "node"]} />
