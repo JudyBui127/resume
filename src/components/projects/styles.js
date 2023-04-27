@@ -1,4 +1,4 @@
-import { Card, Grid, Stack, Typography } from "@mui/material";
+import { Card, CardMedia, Grid, Stack, Typography } from "@mui/material";
 import styled from "styled-components";
 import Button from '@mui/material/Button';
 
@@ -13,8 +13,12 @@ export const HelloText = styled(Typography)`
   &&{
     color: #ff5277;
     font-weight: 600;
-    font-size: 28px;
+    font-size: 24px;
     text-transform: uppercase;
+
+    @media all and (min-width: 768px) { 
+      font-size: 30px;
+    }
   }
 `;
 
@@ -57,7 +61,11 @@ export const StyledCard = styled(Card)`
     display: flex;
     flex-direction: column; 
     cursor: pointer;
-    max-width: 345px;
+    max-width: 300px;
+
+    @media all and (min-width: 768px) { 
+      max-width: 345px;
+    }
   }
 `;
 
@@ -89,3 +97,9 @@ export const StyledGrid = styled(Grid)`
 
 `;
 
+export const StyledCardMedia = styled(CardMedia)`
+  height: 100px;
+  @media all and (min-width: 768px) { 
+    height: 200px;
+  }
+`;

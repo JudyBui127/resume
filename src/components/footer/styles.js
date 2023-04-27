@@ -21,8 +21,12 @@ export const FooterText = styled(Typography)`
   &&{
     font-weight: 500;
     font-size: 16px;
-    margin: 0 80px;
+    margin: 0 16px;
     font-family: "Roboto";
     color: grey;
+    @media all and (min-width: 768px) { 
+      margin: 0 80px;
+    }
+    
   }
 `;

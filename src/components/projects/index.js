@@ -1,6 +1,5 @@
 import { 
   Stack, 
-  CardMedia,
   CardActions,
   CardContent,
   Grid,
@@ -15,7 +14,8 @@ import {
   TechStack,
   LogoContainer,
   LogoImg,
-  StyledGrid
+  StyledGrid,
+  StyledCardMedia
 } from './styles';
 
 import restEyes from "./assets/rest-your-eyes2.png";
@@ -51,8 +51,7 @@ const Projects = () => {
       <StyledGrid 
         container 
         rowSpacing={8} 
-        columnSpacing={{ sx: 3, sm: 3, md: 3, lg: 12 }}
-        style={{}}>
+        columnSpacing={{ sx: 3, sm: 3, md: 3, lg: 12 }}>
         <ProjectCard 
           projectImg={restEyes}
           title={"Rest Your Eyes"}
@@ -87,10 +86,10 @@ const ProjectCard = ({
       <StyledCard 
         onClick={() =>
           window.open(website || github, '_blank')}>
-        <CardMedia
+        <StyledCardMedia
           component="img"
           alt="rest your eyes"
-          height="200"
+          height="100"
           image={projectImg}/>
         <CardContent>
           <ProjectName gutterBottom variant="h5" component="div">
